@@ -72,7 +72,7 @@ class TicketTypeController extends Controller
         if($tickettype->save()) {
             return response()->json(['success' => true, 'type' => (new TicketTypeResource($tickettype))]);
         }else {
-            return response()->json(['success' => true, 'message' => "something went wrong while updating ticket type"]);
+            return response()->json(['success' => false, 'message' => "something went wrong while updating ticket type"]);
         }
     }
 }

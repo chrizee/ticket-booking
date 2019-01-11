@@ -45,7 +45,7 @@ class TicketController extends Controller
         if($ticket) {
             return response()->json(['success' => true, 'ticket' => (new TicketResource($ticket))]);
         }else {
-            return response()->json(['success' => true, 'message' => "something went wrong while creating ticket"]);
+            return response()->json(['success' => false, 'message' => "something went wrong while creating ticket"]);
         }
     }
 
@@ -91,7 +91,7 @@ class TicketController extends Controller
         if($ticket->save()) {
             return response()->json(['success' => true, 'ticket' => (new TicketResource($ticket))]);
         }else {
-            return response()->json(['success' => true, 'message' => "something went wrong while updating ticket"]);
+            return response()->json(['success' => false, 'message' => "something went wrong while updating ticket"]);
         }
     }
 
