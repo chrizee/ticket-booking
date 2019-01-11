@@ -5,8 +5,8 @@ After cloning the project, install the dependencies by running
 
 Create a database and update the database records in the .env file.
 Run the following commands to finish the database setup
-1. ```php artisan migrate```
-2. ```php artisan db:seed```
+1. ```php artisan migrate``` -creates the database tables
+2. ```php artisan db:seed``` -seed the database with test data
 
 ## End points
 ### 1. Get all tickets
